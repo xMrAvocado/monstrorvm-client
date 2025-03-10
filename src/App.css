@@ -1,42 +1,171 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/*
+
+Paleta de Colores:
+Negro Carbón (#1b1b1b) – Un fondo oscuro para representar la atmósfera sombría del juego.
+Gris Oscuro (#4a4a4a) – Para textos y elementos secundarios, creando un contraste suave con el fondo sin ser demasiado fuerte.
+Rojo Sangre (#9a1b1b) – Un rojo oscuro que remite a la violencia y el peligro, perfecto para resaltar detalles como botones, enlaces o alertas.
+Verde Neón (#2fdb77) – Para resaltar efectos de luz, como el resplandor de los monstruos o la interacción con objetos especiales. Agrega un toque de color vibrante sin romper la atmósfera.
+Marrón Tierra (#5c3e4d) – Para darle una sensación más orgánica y sucia, asociada con el ambiente pantanoso del juego.
+Beige Sucio (#b3a59d) – Un tono claro para los textos principales, que contrasta bien con los tonos oscuros pero mantiene la estética cruda.
+Amarillo Suave (#e5d07f) – Para detalles como iconos o pequeños acentos, que añaden un toque de tensión visual, similar a las luces de peligro.
+
+Cómo utilizar la paleta:
+Fondos principales: Negro Carbón o Gris Oscuro.
+Botones y llamados a la acción: Rojo Sangre o Verde Neón.
+Textos: Beige Sucio para los textos primarios y Gris Oscuro para los secundarios.
+Detalles y acentos: Amarillo Suave para alertas o iconos pequeños.
+
+*/
+
+body {
+    margin: 0;
+    background-color: #4a4a4a;
+    color: #cccbcd;
+}
+
+.lineSeparation {
+    margin-right: 40px;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  a:link {
+    text-decoration: none;
+    color: #611719;
+  }
+  
+  a:hover {
+    color: #cccbcd;
+  }
+  
+  button {
+    height: 40px;
+    background-color: #611719;
+    border-color: #611719;
+    border-radius: 10px;
+    color: #cccbcd;
+    font-weight: bolder;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+  }
+  
+  #footer{
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    bottom: 0;
+  }
+
+
+  #navBarCSS {
+    background-color: #1b1b1b;
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center; 
+    position:fixed;
+    width:100vW;
+    padding: 10px 0px;
+  }
+  
+#empty-space{
+    width: 8vw;
+}
+
+  #divBtnSidebarCss {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+    }
+  
+  #divBtnSidebarCss:hover {
+    cursor: pointer;
+    }
+  
+  .menuOption{
+    color: #cccbcd;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .menuOption:hover{
+    color: #611719;
+    }
+  
+  #divTituloCSS {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+  }
+
+  
+
+  #homepageCSS{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    justify-content: space-between;
+    background-image: url("./images/huntbackground_2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 85px;
+    height: 87vh;
+  }
+#eachMonsterList{
+  background-color: #1b1b1b;
+  display:flex;
+  flex-direction: column;
   text-align: center;
+  margin: 5px;
+  padding: 50px;
+  border-radius: 10px;
+  color: #cccbcd;
+  font-weight: bolder;
+  font-size: larger;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#eachMonsterList:hover{
+    cursor: pointer;
+    color: #611719;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#categoriesCSS{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    justify-content: space-between;
+    background-image: url("./images/Grunts_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 85px;
+    height: 87vh;
   }
-  to {
-    transform: rotate(360deg);
-  }
+#eachCategoryList{
+  background-color: #1b1b1b;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5px;
+  padding: 50px;
+  border-radius: 10px;
+  color: #cccbcd;
+  font-weight: bolder;
+  font-size: larger;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+#eachCategoryList:hover{
+    cursor: pointer;
+    color: #611719;
 }
