@@ -112,16 +112,16 @@ a {
 
   
 
-  #homepageCSS{
+  #monsterListCSS{
     display: flex;
     flex-direction:column;
     text-align: center;
     justify-content: space-between;
-    background-image: url("./images/huntbackground_2.jpg");
+    background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360013/huntbackground_2_flljtd.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 85px;
-    height: 87vh;
+    padding-bottom: 60px;
   }
 #eachMonsterList{
   background-color: #1b1b1b;
@@ -146,11 +146,11 @@ a {
     flex-direction:column;
     text-align: center;
     justify-content: space-between;
-    background-image: url("./images/Grunts_bg.jpg");
+    background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360012/Grunts_bg_xuyzqk.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 85px;
-    height: 87vh;
+    padding-bottom: 60px;
   }
 #eachCategoryList{
   background-color: #1b1b1b;
@@ -169,3 +169,20 @@ a {
     cursor: pointer;
     color: #611719;
 }
+
+.formCSS{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 900px;
+    margin-bottom: 35px;
+    padding-top: 60px;
+  }
+  
+  .formCSS label{
+    color: #FFF6E5;
+    font-weight: bolder;
+    
+  }

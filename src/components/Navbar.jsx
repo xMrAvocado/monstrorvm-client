@@ -24,7 +24,7 @@ function Navbar() {
     return (
         <div id="navBarCSS">
             <div id="divBtnSidebarCss"  onClick={() => handleStateSidebar()}>
-                <img width={"40vW"} height={"40vW"} src="src\images\burgericon.png" alt="logo-menu"/>
+                <img width={"40vW"} height={"40vW"} src="https://res.cloudinary.com/dh8naz2ht/image/upload/v1741614866/burgericon_oyxbn3.png" alt="logo-menu"/>
                 <h3 style={{paddingLeft: "10px"}}>MENU</h3>
             </div>
            

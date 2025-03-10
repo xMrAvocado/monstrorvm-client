@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-function HomePage() {
+function CategoryList() {
   const [allCategories, setAllCategories] = useState([]);
 
   useEffect(() => {
@@ -20,11 +20,9 @@ function HomePage() {
   return (
     <div id="categoriesCSS">
 
-        <h1>All $</h1>
-
       {allCategories.map((eachCategory) => {
         return (
-          <Link key={eachCategory.id} to={`/categories/${eachCategory.id}`}>
+          <Link key={eachCategory.id} to={`/monsters/category/${eachCategory.id}`}>
             <div id="eachCategoryList">{eachCategory.title.toUpperCase()}</div>
           </Link>
         );
@@ -33,4 +31,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default CategoryList;
