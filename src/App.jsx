@@ -10,6 +10,7 @@ import MonsterDetails from "./pages/MonsterDetails";
 import MonsterList from "./pages/MonsterList";
 import AddMonster from "./pages/AddMonster";
 import { useEffect,useState } from "react";
+import EditMonster from "./pages/EditMonster";
 
 function App() {
   const [listMonsters, setListMonsters] = useState([]);
@@ -38,6 +39,10 @@ function App() {
         <Route
           path="/monsters/category/:categoryId"
           element={<MonsterList />}
+        ></Route>
+        <Route
+          path="/monsters/edit/:monsterId"
+          element={<EditMonster />}
         ></Route>
         <Route
           path="/add-monster"

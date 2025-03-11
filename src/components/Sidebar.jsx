@@ -23,7 +23,6 @@ function Sidebar(props) {
     return (
         <div style={sideBarCSS}>  
             <Link to ="/"><h2 className="menuOption">Home</h2></Link><hr className="lineSeparation"/>
-            <Link to ="/categories"><h2 className="menuOption">Categories Information</h2></Link><hr className="lineSeparation"/>
             <Link to ="/add-monster"><h2 className="menuOption">Add Monster</h2></Link><hr className="lineSeparation"/>
             <Link to="/about"><h2 className="menuOption">About Me</h2></Link>
         </div>

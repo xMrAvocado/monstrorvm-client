@@ -1,7 +1,6 @@
 import Sidebar from './Sidebar.jsx'
 import { useState } from 'react';
 
-
 let cambioScaleY = "scaleY(0)";
 
 function Navbar() {
@@ -29,7 +28,7 @@ function Navbar() {
             </div>
            
             <div id="divTituloCSS">
-                <h2 style={{width: "15vW", textAlign: "center"}}>MONSTRORVM</h2>
+            <h2 style={{width: "15vW", textAlign: "center"}}>MONSTRORVM</h2>
             </div>
             <Sidebar cambioScaleY={cambioScaleY} />
             <div id="empty-space">

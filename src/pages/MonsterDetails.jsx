@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function MonsterDetails() {
-    /*PARAMETROS DINAMICOS PARA DETAILS*/ 
   const parametrosDinamicos = useParams();
-  console.log(parametrosDinamicos.monsterId);
+  //console.log(parametrosDinamicos.monsterId);
+
+  const navigate = useNavigate();
 
   const [monster, setMonster] = useState([]);
   
@@ -15,11 +17,11 @@ function MonsterDetails() {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
+          //console.log(data);
           setMonster(data);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         });
     }, [parametrosDinamicos.monsterId]);
 
@@ -31,7 +33,15 @@ function MonsterDetails() {
             
         )
     }
-
+    const deleteMonster = () => {
+      axios.delete(`http://localhost:5005/monsters/${parametrosDinamicos.monsterId}`)
+      .then(()=>{
+        navigate(`/`)
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    }; 
   return (
     <div id="detallesMonstruo">
     <img
@@ -44,8 +54,9 @@ function MonsterDetails() {
     <h1 style={{ textAlign: "center", margin: "5px" }}>{monster.name}</h1>
     <p>{monster.description}</p>
     <div id="btnsDetails">
-    {/*<Link to={`/edit-monster/${parametrosDinamicos.monsterId}`}><button>Editar</button></Link>*/}
+    <Link to={`/monsters/edit/${parametrosDinamicos.monsterId}`}><button>Edit</button></Link>
     <Link to="/"><button>Back</button></Link>
+    <button onClick={deleteMonster}>Delete</button>
     </div>
     
     </div>

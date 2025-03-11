@@ -1,15 +1,17 @@
-import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-function AddMonster(props) {
+function AddMonster() {
   const [newMonster, setNewMonster] = useState({
     name: "",
     categoryId: "",
     description: "",
     image: "",
   });
+
+  const navigate = useNavigate();
 
   const handleAll = (event) => {
     let name = event.target.name;
@@ -18,19 +20,15 @@ function AddMonster(props) {
     setNewMonster(clone);
   };
 
-/*Para selector ver clase de estudiantes
-
-Para hacer elpost ver clase de project management*/
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const response = await axios.post(`http://localhost:5005/monsters`, {
-        name: name,
-        categoryId: categoryId,
-        description: description,
-        image: image,
+        name: newMonster.name,
+        categoryId: newMonster.categoryId,
+        description: newMonster.description,
+        image: newMonster.image,
       });
       console.log("todo bien, tarea creada");
       //console.log(response)
@@ -41,6 +39,7 @@ Para hacer elpost ver clase de project management*/
         description: "",
         image: "",
       });
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
