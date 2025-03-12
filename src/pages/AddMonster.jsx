@@ -65,7 +65,8 @@ function AddMonster() {
             placeholder="Category Id"
             onChange={handleAll}
           />*/}
-          <select value={newMonster.categoryId}>
+          {/*//todo: imprimir todas las categorias haciendo get y usando un .map*/}
+          <select name="categoryId" onChange={handleAll} value={newMonster.categoryId}>
             <option value="1234">Infected</option>
             <option value="2345">Marked</option>
             <option value="3456">Packs</option>

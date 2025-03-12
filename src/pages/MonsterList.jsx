@@ -61,16 +61,16 @@ function MonsterList() {
 
   return (
     <div id="monsterByCategoryContainer">
-      <select onChange={handleSelectCategory} value={categoryId}>
-        <option value="1234">Infected</option>
-        <option value="2345">Marked</option>
-        <option value="3456">Packs</option>
-        <option value="4567">R. Target</option>
-        <option value="5678">Target</option>
+      <select onChange={handleSelectCategory} value={categoryId} id="categorySelector">
+        <option className="optionCategory" value="1234">Infected</option>
+        <option className="optionCategory" value="2345">Marked</option>
+        <option className="optionCategory" value="3456">Packs</option>
+        <option className="optionCategory" value="4567">R. Target</option>
+        <option className="optionCategory" value="5678">Target</option>
       </select>
-      <div className="categoyDetails">
-      <h1 style={{ textAlign: "center", margin: "5px" }}>{category.title}</h1>
-      <h3 style={{ textAlign: "center", margin: "5px" }}>Threat Level: {category.threatLvl}</h3>
+      <div className="categoryDetails">
+      <h1 className="pageTitle">{category.title}</h1>
+      <h3>Threat Level: <span id="threatLevel">{category.threatLvl}</span></h3>
       <p>{category.description}</p>
       </div>
       <div id="monsterListCSS">
@@ -83,7 +83,7 @@ function MonsterList() {
         }).map((eachMonster) => {
           return (
             <Link key={eachMonster.id} to={`/monsters/${eachMonster.id}`}>
-              <div id="eachMonsterList">{eachMonster.name.toUpperCase()}</div>
+              <div id="eachMonsterList"><h2>{eachMonster.name} ► </h2></div>
             </Link>
           );
         })}

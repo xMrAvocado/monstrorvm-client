@@ -10,7 +10,7 @@ function About() {
             <span style={{textDecoration:"underline"}}>Posibles funcionalidades</span>: Lore Ipsum.
       </p>
       <div className="datosEstudiante">
-        <img src="src\images\imagen_samuel.jpg" alt="samuel" width="200px" />
+        <img src="https://res.cloudinary.com/dh8naz2ht/image/upload/v1741774814/imagen_samuel_zeoqlg.jpg" alt="samuel" width="200px" />
         <h3>Samuel Pérez Besada</h3>
         <div className="enlacesEstudiante">
           <a

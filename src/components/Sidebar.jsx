@@ -22,9 +22,9 @@ function Sidebar(props) {
 
     return (
         <div style={sideBarCSS}>  
-            <Link to ="/"><h2 className="menuOption">Home</h2></Link><hr className="lineSeparation"/>
-            <Link to ="/add-monster"><h2 className="menuOption">Add Monster</h2></Link><hr className="lineSeparation"/>
-            <Link to="/about"><h2 className="menuOption">About Me</h2></Link>
+            <Link to ="/"><h2 className="menuOption">CATEGORIES</h2></Link><hr className="lineSeparation"/>
+            <Link to ="/add-monster"><h2 className="menuOption">ADD MONSTER</h2></Link><hr className="lineSeparation"/>
+            <Link to="/about"><h2 className="menuOption">ABOUT ME</h2></Link>
         </div>
     )
 }

@@ -34,31 +34,35 @@ function MonsterDetails() {
         )
     }
     const deleteMonster = () => {
-      axios.delete(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}`)
-      .then(()=>{
-        navigate(`/`)
-      })
-      .catch((error)=>{
-        console.log(error)
-      })
+      let text = "Are you sure you want to delete it?"
+      if (confirm(text) == true){
+        axios.delete(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}`)
+        .then(()=>{
+          navigate(`/`)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+      }
     }; 
   return (
-    <div id="detallesMonstruo">
+    <div id="monsterDetails">
     <img
         src={monster.image}
         alt=""
         width="300px"
         height="300px"
-        style={{ textAlign: "center", margin: "5px" }}
+        id="monsterImg"
     />
-    <h1 style={{ textAlign: "center", margin: "5px" }}>{monster.name}</h1>
-    <p>{monster.description}</p>
+    <h1 id="monsterName">{monster.name}</h1>
+    <p id="monsterDescription">{monster.description}</p>
     <div id="btnsDetails">
     <Link to={`/monsters/edit/${parametrosDinamicos.monsterId}`}><button>Edit</button></Link>
-    <Link to="/"><button>Back</button></Link>
     <button onClick={deleteMonster}>Delete</button>
     </div>
-    
+    <div id="btnsDetails2">
+    <Link to="/"><button>Back</button></Link>
+    </div>
     </div>
   )
 }

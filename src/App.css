@@ -1,5 +1,16 @@
 /*
 
+********************************
+Tamaño de las opciones del selector.
+
+CSS
+
+Probar a .map de todas las categorias 
+
+animacion de carga de datos
+********************************
+
+
 Paleta de Colores:
 Negro Carbón (#1b1b1b) – Un fondo oscuro para representar la atmósfera sombría del juego.
 Gris Oscuro (#4a4a4a) – Para textos y elementos secundarios, creando un contraste suave con el fondo sin ser demasiado fuerte.
@@ -18,238 +29,400 @@ Detalles y acentos: Amarillo Suave para alertas o iconos pequeños.
 */
 
 body {
-    margin: 0;
-    background-color: #4a4a4a;
-    color: #cccbcd;
+  margin: 0;
+  background-color: #4a4a4a;
+  color: #cccbcd;
 }
 
 .lineSeparation {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 a {
-    text-decoration: none;
-  }
-  
-  a:link {
-    text-decoration: none;
-    color: #611719;
-  }
-  
-  a:hover {
-    color: #cccbcd;
-  }
-  
-  button {
-    height: 40px;
-    background-color: #611719;
-    border-color: #611719;
-    border-radius: 10px;
-    color: #cccbcd;
-    font-weight: bolder;
-  }
-  
-  button:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px black;
-  }
-  
-  #footer{
-    background-color: #1b1b1b;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    width: 100vw;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    bottom: 0;
-  }
-
-
-  #navBarCSS {
-    background-color: #1b1b1b;
-    display: flex; 
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center; 
-    position:fixed;
-    width:100vW;
-    padding: 10px 0px;
-  }
-  
-#empty-space{
-    width: 8vw;
+  text-decoration: none;
 }
 
-  #divBtnSidebarCss {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 30px;
-    }
-  
-  #divBtnSidebarCss:hover {
-    cursor: pointer;
-    }
-  
-  .menuOption{
-    color: #cccbcd;
-    font-weight: bolder;
-    text-align: left;
-    margin-left: 10px;
-  }
-  
-  .menuOption:hover{
-    color: #611719;
-    }
-  
-  #divTituloCSS {
-      display: flex; 
-      flex-direction: column; 
-      align-items: center;
-  }
+a:link {
+  text-decoration: none;
+  color: #611719;
+}
 
-  
+a:hover {
+  color: #cccbcd;
+}
 
-  #monsterByCategoryContainer{
-    display: flex;
-    flex-direction:column;
-    text-align: center;
-    justify-content: space-between;
-    background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360013/huntbackground_2_flljtd.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 85px;
-    padding-bottom: 60px;
-  }
-#eachMonsterList{
+button {
+  height: 60px;
+  width: 120px;
+  background-color: #611719;
+  border-color: #611719;
+  border-radius: 10px;
+  color: #cccbcd;
+  font-weight: bolder;
+  font-size: larger;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+  color: #000;
+}
+
+#footer {
   background-color: #1b1b1b;
-  display:flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  bottom: 0;
+}
+
+#navBarCSS {
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  padding: 10px 0px;
+}
+
+#empty-space {
+  width: 8vw;
+}
+
+#divBtnSidebarCss {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+}
+
+#divBtnSidebarCss:hover {
+  cursor: pointer;
+}
+
+.menuOption {
+  color: #cccbcd;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.menuOption:hover {
+  color: #611719;
+}
+
+#divTituloCSS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 250%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #611719;
+}
+
+#monsterByCategoryContainer {
+  display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 5px;
-  padding: 50px;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360013/huntbackground_2_flljtd.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+
+#threatLevel{
+  color: #1883aa;
+}
+
+#monsterListCSS{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+}
+
+#eachMonsterList {
+  background-color: #4a4a4a;
+  padding: 10px;
+  width: 250px;
   border-radius: 10px;
   color: #cccbcd;
   font-weight: bolder;
   font-size: larger;
 }
 
-#eachMonsterList:hover{
-    cursor: pointer;
-    color: #611719;
+#eachMonsterList:hover {
+  cursor: pointer;
+  color: #611719;
 }
 
-#categoriesCSS{
-    display: flex;
-    flex-direction:column;
-    text-align: center;
-    justify-content: space-between;
-    background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360012/Grunts_bg_xuyzqk.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 85px;
-    padding-bottom: 60px;
-  }
-#eachCategoryList{
-  background-color: #1b1b1b;
-  display:flex;
+#categoriesCSS {
+  display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 5px;
-  padding: 50px;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360012/Grunts_bg_xuyzqk.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  height: 85vh;
+}
+
+#categorySelector {
+  height: 60px;
+  width: 130px;
+  background-color: #4a4a4a;
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+  color: #1b1b1b;
+  font-weight: bolder;
+  font-size: larger;
+  margin-bottom: 30px;
+}
+
+#categorySelector:hover {
+  cursor: pointer;
+}
+
+.optionCategory {
+  background-color: #4a4a4a;
+  border: #4a4a4a solid 3px;
+  border-radius: 5px;
+  color: #1b1b1b;
+  font-weight: bold;
+}
+
+.optionCategory:hover {
+  cursor: pointer;
+}
+#eachCategoryList {
+  background-color: #4a4a4a;
+  padding: 10px;
+  width: 250px;
   border-radius: 10px;
   color: #cccbcd;
   font-weight: bolder;
   font-size: larger;
 }
 
-#eachCategoryList:hover{
-    cursor: pointer;
-    color: #611719;
+#eachCategoryList:hover {
+  cursor: pointer;
+  color: #611719;
 }
 
-.formCSS{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    height: 900px;
-    margin-bottom: 35px;
-    padding-top: 60px;
-  }
-  
-  .formCSS label{
-    color: #FFF6E5;
-    font-weight: bolder;
-    
-  }
-  
-  #aboutDivCSS {
-    margin-bottom: 40px;
-    padding-top: 90px;
-  }
-  
-  #aboutDivCSS h1{
-  color: #FF6B6B;
+.categoryDetails {
+  background-color: #e5d07f;
+  border: #4a4a4a solid 3px;
+  border-radius: 5px;
+  color: #4a4a4a;
+  font-size: large;
+  font-weight: bold;
+  margin: 0px 700px 0px 700px;
+  padding:10px;
+  word-spacing: 4px;
+}
+
+#monsterDetails{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 95px;
+  padding-bottom: 65px;
+}
+
+#monsterImg{
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+}
+
+#monsterName{
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+  background-color: #e5d07f;
+  color: #611719;
+  padding: 10px;
+}
+
+#monsterDescription{
+  background-color: #e5d07f;
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+  color: #4a4a4a;
+  font-size: large;
+  font-weight: bold;
+  margin: 0px 500px 0px 500px;
+  padding:20px 30px 20px 30px;
+  word-spacing: 4px;
+}
+
+#btnsDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vh;
+}
+
+#btnsDetails button{
+  background-color: #1883aa;
+  border-color: #1883aa;
+  color: #000;
+}
+
+#btnsDetails button:hover{
+  color: white;
+}
+
+.formCSS {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 900px;
+  margin-bottom: 35px;
+  padding-top: 60px;
+}
+
+.formCSS label {
+  color: #fff6e5;
+  font-weight: bolder;
+}
+
+#aboutDivCSS {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  padding-top: 90px;
+}
+
+.descripcionProyecto{
+  background-color: #e5d07f;
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+  color: #4a4a4a;
+  font-size: large;
+  font-weight: bold;
+  margin: 20px 500px 20px 500px;
+  padding:20px 30px 20px 30px;
+  word-spacing: 4px;
+}
+
+.descripcionEstudiante{
+  background-color: #e5d07f;
+  border: #1b1b1b solid 3px;
+  border-radius: 5px;
+  color: #4a4a4a;
+  font-size: large;
+  font-weight: bold;
+  margin: 20px 500px 0px 500px;
+  padding:10px 30px 10px 30px;
+  word-spacing: 4px;
+}
+
+#aboutDivCSS h1 {
+  color: #ff6b6b;
   text-decoration: underline;
+}
+
+.datosEstudiante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.enlacesEstudiante {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.descripcionEstudiante {
+  width: 300px;
+  text-align: left;
+}
+
+.linkedin {
+  background-color: blue;
+  border: 2px solid #000;
+  border-color: blue;
+  border-radius: 10px;
+  color: #fff6e5;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.linkedin:hover {
+  border-color: black;
+  box-shadow: 2px 2px black;
+}
+
+.github {
+  background-color: grey;
+  border: 2px solid #000;
+  border-color: grey;
+  border-radius: 10px;
+  color: #fff6e5;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.github:hover {
+  border-color: black;
+  box-shadow: 2px 2px black;
+}
+
+.descripcionProyecto {
+  width: 80vw;
+  font-size: larger;
+  text-align: center;
+  align-items: center;
+}
+
+
+@media (width <= 1250px) {
+  .categoryDetails {
+    margin: 60px;
   }
-  
-  .datosEstudiante{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+
+  #monsterListCSS{
+    height: 40vh;
   }
-  
-  .enlacesEstudiante{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    justify-content: space-around;
-    margin-top: 20px;
+
+  #monsterDescription{
+    margin: 60px;
   }
-  
-  .descripcionEstudiante{
-    width: 300px;
-    text-align: left;
+
+  #categoriesCSS {
+    height: 88vh;
   }
-  
-  .linkedin{
-    background-color: blue;
-    border: 2px solid #000;
-    border-color: blue;
-    border-radius: 10px;
-    color: #FFF6E5;
-    font-weight: bolder;
-    padding: 10px;
-  }
-  
-  .linkedin:hover{
-    border-color: black;
-    box-shadow: 2px 2px black;
-  }
-  
-  .github{
-    background-color: grey;
-    border: 2px solid #000;
-    border-color: grey;
-    border-radius: 10px;
-    color: #FFF6E5;
-    font-weight: bolder;
-    padding: 10px;
-  }
-  
-  .github:hover{
-    border-color: black;
-    box-shadow: 2px 2px black;
-  }
-  
-  .descripcionProyecto{
-    width: 80vw;
-    font-size: larger;
-    text-align: center;
-    align-items: center;
-  }
+}

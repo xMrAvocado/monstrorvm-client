@@ -19,11 +19,12 @@ function CategoryList() {
   }, []);
   return (
     <div id="categoriesCSS">
-
+      {/*<h1 className="pageTitle">CATEGORIES</h1>*/}
       {allCategories.map((eachCategory) => {
         return (
           <Link key={eachCategory.id} to={`/monsters/category/${eachCategory.id}`}>
-            <div id="eachCategoryList">{eachCategory.title.toUpperCase()}</div>
+            <div id="eachCategoryList">
+              <h2>{eachCategory.title.toUpperCase()}</h2></div>
           </Link>
         );
       })}
