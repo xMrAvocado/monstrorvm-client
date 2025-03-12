@@ -58,13 +58,20 @@ function AddMonster() {
             onChange={handleAll}
           />
           <label>Id Category:&nbsp;</label>
-          <input
+          {/*<input
             value={newMonster.categoryId}
             name="categoryId"
             type="text"
             placeholder="Category Id"
             onChange={handleAll}
-          />
+          />*/}
+          <select value={newMonster.categoryId}>
+            <option value="1234">Infected</option>
+            <option value="2345">Marked</option>
+            <option value="3456">Packs</option>
+            <option value="4567">R. Target</option>
+            <option value="5678">Target</option>
+          </select>
           <label>Description:&nbsp;</label>
           <input
             className="textArea"
