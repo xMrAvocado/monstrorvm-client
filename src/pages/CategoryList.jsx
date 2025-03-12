@@ -5,7 +5,7 @@ function CategoryList() {
   const [allCategories, setAllCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5005/categories")
+    fetch(`${import.meta.env.VITE_SERVER_URL}/categories`)
       .then((response) => {
         return response.json();
       })

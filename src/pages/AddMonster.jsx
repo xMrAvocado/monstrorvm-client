@@ -24,7 +24,7 @@ function AddMonster() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`http://localhost:5005/monsters`, {
+      const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/monsters`, {
         name: newMonster.name,
         categoryId: newMonster.categoryId,
         description: newMonster.description,

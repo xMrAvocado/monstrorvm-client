@@ -20,7 +20,7 @@ function EditMonster() {
     
       useEffect(()=>{
 
-        axios.get(`http://localhost:5005/monsters/${parametrosDinamicos.monsterId}`)
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}`)
         .then((response)=>{
           //console.log(response)
           setEditedMonster(response.data);
@@ -35,7 +35,7 @@ function EditMonster() {
         event.preventDefault();
     
         try {
-          const response = await axios.put(`http://localhost:5005/monsters/${parametrosDinamicos.monsterId}`, {
+          const response = await axios.put(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}`, {
             name: editedMonster.name,
             categoryId: editedMonster.categoryId,
             description: editedMonster.description,

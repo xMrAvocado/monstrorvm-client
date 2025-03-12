@@ -32,11 +32,11 @@ function MonsterList() {
     const getData = async () =>{
 
       try {
-        const response1 = await axios.get(`http://localhost:5005/monsters?categoryId=${categoryId}`);
+        const response1 = await axios.get(`${import.meta.env.VITE_SERVER_URL}/monsters?categoryId=${categoryId}`);
         //console.log("HOLA",response)
         setCategoryMonsters(response1.data);
 
-        const response2 = await axios.get(`http://localhost:5005/categories/${categoryId}`);
+        const response2 = await axios.get(`${import.meta.env.VITE_SERVER_URL}/categories/${categoryId}`);
         //console.log("ADIOS",response)
         setCategory(response2.data);
 

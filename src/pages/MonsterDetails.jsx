@@ -12,7 +12,7 @@ function MonsterDetails() {
   const [monster, setMonster] = useState([]);
   
     useEffect(() => {
-      fetch(`http://localhost:5005/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
+      fetch(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
         .then((response) => {
           return response.json();
         })
@@ -34,7 +34,7 @@ function MonsterDetails() {
         )
     }
     const deleteMonster = () => {
-      axios.delete(`http://localhost:5005/monsters/${parametrosDinamicos.monsterId}`)
+      axios.delete(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}`)
       .then(()=>{
         navigate(`/`)
       })
