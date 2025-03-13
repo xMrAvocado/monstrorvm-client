@@ -317,20 +317,90 @@ button:hover {
 }
 
 /*FORMS*/
+.formContainer{
+  background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360012/Grunts_bg_xuyzqk.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:20%;
+  padding-bottom: 70px;
+  padding-top: 110px;
+}
 .formCSS {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  height: 900px;
-  margin-bottom: 35px;
-  padding-top: 60px;
+  text-align: left;
+  align-items: left;
+  justify-content: space-between;
+  height: 500px;
+  font-size: larger;
+  padding-bottom: 35px;
+  padding-top: 150px;
+  margin: 0px 500px 0px 500px;
 }
 
 .formCSS label {
   color: #fff6e5;
   font-weight: bolder;
+}
+
+.formCSS input {
+  background-color: #fff6e5;
+  font-weight: bolder;
+}
+
+.formCSS textarea {
+  background-color: #fff6e5;
+  font-weight: bolder;
+}
+
+.categoryForm{
+  height: 30px;
+  width: 100px;
+  background-color: #4a4a4a;
+  border: #1b1b1b solid 3px;
+  border-radius: 2px;
+  color: #1b1b1b;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.categoryForm:hover{
+  cursor: pointer;
+}
+
+.categoryForm option{
+  background-color: #4a4a4a;
+  border: #4a4a4a solid 3px;
+  border-radius: 5px;
+  color: #1b1b1b;
+  font-weight: bold;
+}
+
+.formElementTA{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.btnsForms{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size:medium;
+}
+
+.submitBtn{
+  background-color: #1883aa;
+  border-color: #1883aa;
+  color: #000;
+}
+
+.submitBtn:hover{
+  color: white;
 }
 
 /*ABOUT PROJECT AND ME*/
@@ -484,6 +554,18 @@ button:hover {
   #divTituloCSS {
     margin-right: 20px;
   }
+
+  .formCSS {
+  padding-bottom: 50px;
+  padding-top: 100px;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .formContainer{
+    background-position:20%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 }
 
 /*MOBILE PHONE CHANGES*/
@@ -535,5 +617,14 @@ button:hover {
 
   #divTituloCSS {
     margin-right: 20px;
+  }
+
+  .formCSS {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .formContainer{
+    padding-bottom: 50px;
+    padding-top: 0px;
   }
 }

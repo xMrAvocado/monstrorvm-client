@@ -64,9 +64,10 @@ function EditMonster() {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div className="formCSS">
+        <div className="formElement">
           <label>Name:&nbsp;</label>
           <input
             value={editedMonster.name}
@@ -75,6 +76,8 @@ function EditMonster() {
             placeholder="Name"
             onChange={handleAll}
           />
+        </div>
+        <div className="formElement">
           <label>Id Category:&nbsp;</label>
           {/*<input
                 value={editedMonster.categoryId}
@@ -84,6 +87,7 @@ function EditMonster() {
                 onChange={handleAll}
               />*/}
           <select
+            className="categoryForm"
             name="categoryId"
             onChange={handleAll}
             value={editedMonster.categoryId}
@@ -94,15 +98,19 @@ function EditMonster() {
             <option value="4567">R. Target</option>
             <option value="5678">Target</option>
           </select>
+          </div>
+          <div className="formElementTA">
           <label>Description:&nbsp;</label>
-          <input
+          <textarea
             className="textArea"
             value={editedMonster.description}
             name="description"
-            type="textarea"
             placeholder="Description"
+            rows="10" cols="20"
             onChange={handleAll}
           />
+          </div>
+          <div className="formElement">
           <label>Image:&nbsp;</label>
           <input
             value={editedMonster.image}
@@ -111,8 +119,9 @@ function EditMonster() {
             placeholder="Image"
             onChange={handleAll}
           />
+          </div>
           <div className="btnsForms">
-            <button type="submit">Update Monster</button>
+            <button className="submitBtn"  type="submit">Update Monster</button>
             <Link to="/">
               <button>Back</button>
             </Link>

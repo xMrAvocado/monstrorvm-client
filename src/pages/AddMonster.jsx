@@ -46,9 +46,10 @@ function AddMonster() {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div className="formCSS">
+          <div className="formElement">
           <label>Name:&nbsp;</label>
           <input
             value={newMonster.name}
@@ -57,6 +58,9 @@ function AddMonster() {
             placeholder="Name"
             onChange={handleAll}
           />
+          </div>
+          
+          <div className="formElement">
           <label>Category:&nbsp;</label>
           {/*<input
             value={newMonster.categoryId}
@@ -66,22 +70,28 @@ function AddMonster() {
             onChange={handleAll}
           />*/}
           {/*//todo: imprimir todas las categorias haciendo get y usando un .map*/}
-          <select name="categoryId" onChange={handleAll} value={newMonster.categoryId}>
+          <select className="categoryForm" name="categoryId" onChange={handleAll} value={newMonster.categoryId}>
             <option value="1234">Infected</option>
             <option value="2345">Marked</option>
             <option value="3456">Packs</option>
             <option value="4567">R. Target</option>
             <option value="5678">Target</option>
           </select>
+            </div>
+          
+          <div className="formElementTA">
           <label>Description:&nbsp;</label>
-          <input
+          <textarea
             className="textArea"
             value={newMonster.description}
             name="description"
-            type="textarea"
             placeholder="Description"
+            rows="10" cols="20"
             onChange={handleAll}
           />
+          </div>
+          
+          <div className="formElement">
           <label>Image:&nbsp;</label>
           <input
             value={newMonster.image}
@@ -90,8 +100,10 @@ function AddMonster() {
             placeholder="Image"
             onChange={handleAll}
           />
+            </div>
+          
           <div className="btnsForms">
-            <button type="submit">Add Monster</button>
+            <button className="submitBtn" type="submit">Add Monster</button>
             <Link to="/">
               <button>Back</button>
             </Link>
