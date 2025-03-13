@@ -2,7 +2,7 @@ function Footer() {
     
     return (
         <div id="footer">
-            <a href="" style={{margin: "1% 0% 1% 0%", textDecoration: "none"}}>GitHub Repositorio</a>
+            <a href="https://github.com/xMrAvocado/monstrorvm-client" style={{margin: "1% 0% 1% 0%"}}>Repositorio GitHub</a>
 
         </div>
     )

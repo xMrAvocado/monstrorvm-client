@@ -20,6 +20,17 @@ function Navbar() {
         setStateSidebar(clone);
     };
 
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navBarCSS").style.top = "0";
+      } else {
+        document.getElementById("navBarCSS").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
     return (
         <div id="navBarCSS">
             <div id="divBtnSidebarCss"  onClick={() => handleStateSidebar()}>

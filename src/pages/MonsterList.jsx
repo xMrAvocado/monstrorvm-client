@@ -15,7 +15,7 @@ function MonsterList() {
   // const [searchParams, setSearchParams] = useSearchParams();
 
   const handleSelectCategory = (event) => {
-    console.log("seleccionando categoryId de: " + event.target.value)
+    //console.log("seleccionando categoryId de: " + event.target.value)
     navigate(`/monsters/category/${event.target.value}`)
     /*if(event.target.value === ""){
       setSearchParams() // limpiar los querys
