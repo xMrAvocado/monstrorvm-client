@@ -5,7 +5,7 @@ function About() {
   return (
     <div id="aboutDivCSS">
       <p className="descripcionProyecto">
-            Página web creada con React, la cual provee un listado de los monstruos del juego Hunt:Showdown según su categoría y páginas con los detalles de cada uno de ellos.<br/> <br/> El usuario tienen la capacidad de añadir, eliminar o editar elementos.<br/> <br/>
+            Página web creada con React, la cual provee un listado de los monstruos del juego Hunt:Showdown según su categoría y páginas con los detalles de cada uno de ellos.<br/> <br/> Además de ver el listado, el usuario tienen la capacidad de añadir, eliminar o editar elementos.<br/> <br/>
 
             <span style={{textDecoration:"underline"}}>Posibles funcionalidades</span>: Lore Ipsum.
       </p>

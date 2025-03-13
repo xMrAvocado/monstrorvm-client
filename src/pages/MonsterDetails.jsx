@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function MonsterDetails() {
   const parametrosDinamicos = useParams();
@@ -9,7 +10,7 @@ function MonsterDetails() {
 
   const navigate = useNavigate();
 
-  const [monster, setMonster] = useState([]);
+  const [monster, setMonster] = useState(null);
   
     useEffect(() => {
       fetch(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
@@ -21,7 +22,8 @@ function MonsterDetails() {
           setMonster(data);
         })
         .catch((error) => {
-          //console.log(error);
+          console.log(error);
+          navigate(`*`)
         });
     }, [parametrosDinamicos.monsterId]);
 
@@ -29,6 +31,7 @@ function MonsterDetails() {
         return(
             <div>
                 <h3>Buscando data del monstruo...</h3>
+                <ClipLoader color="#9a1b1b"/>
             </div>
             
         )

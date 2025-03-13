@@ -157,6 +157,7 @@ button:hover {
   background-attachment: fixed;
   padding-top: 100px;
   padding-bottom: 75px;
+  min-height: 76vh;
 }
 
 #threatLevel{
@@ -167,9 +168,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   height: 50vh;
+  margin-top: 15px;
 }
 
 #eachMonsterList {
@@ -177,6 +179,7 @@ button:hover {
   padding: 10px;
   width: 250px;
   border-radius: 10px;
+  margin-bottom: 15px;
   color: #cccbcd;
   font-weight: bolder;
   font-size: larger;
@@ -200,11 +203,12 @@ button:hover {
   padding-top: 75px;
   padding-bottom: 50px;
   height: 85vh;
+  min-height: 79vh;
 }
 
 #categorySelector {
   height: 60px;
-  width: 130px;
+  width: 200px;
   background-color: #4a4a4a;
   border: #1b1b1b solid 3px;
   border-radius: 5px;
@@ -353,7 +357,7 @@ button:hover {
 .categoryForm{
   height: 30px;
   width: 100px;
-  background-color: #4a4a4a;
+  background-color: #fff6e5;
   border: #1b1b1b solid 3px;
   border-radius: 2px;
   color: #1b1b1b;
@@ -366,11 +370,18 @@ button:hover {
 }
 
 .categoryForm option{
-  background-color: #4a4a4a;
-  border: #4a4a4a solid 3px;
+  background-color: #fff6e5;
+  border: #1b1b1b solid 3px;
   border-radius: 5px;
   color: #1b1b1b;
   font-weight: bold;
+}
+
+.formElement input{
+  height: 30px;
+  border: #1b1b1b solid 3px;
+  font-weight: bold;
+  font-size: medium;
 }
 
 .formElementTA{
@@ -379,6 +390,12 @@ button:hover {
   text-align: left;
   align-items: left;
   justify-content: space-between;
+}
+
+.formElementTA textarea{
+  border: #1b1b1b solid 3px;
+  color: #1b1b1b;
+  font-weight: bold;
 }
 
 .btnsForms{
@@ -566,7 +583,8 @@ button:hover {
   .formContainer{
     background-position:20%;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 63px;
+    min-height: 91vh;
   }
 }
 
