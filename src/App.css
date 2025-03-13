@@ -1,9 +1,6 @@
 /*
 
 ********************************
-Tamaño de las opciones del selector.
-
-CSS
 
 Probar a .map de todas las categorias 
 
@@ -515,6 +512,11 @@ button:hover {
     padding-top: 100px;
     height: 100%;
   }
+
+  #eachCategoryList{
+    margin-bottom: 15px;
+  }
+
   #menuWord{
     display: none;
   }
@@ -581,8 +583,13 @@ button:hover {
 
   #categoriesCSS {
     padding-top: 100px;
-    height: 80vh;
+    height: 76vh;
   }
+
+  #eachCategoryList{
+    margin-bottom: 20px;
+  }
+
   #menuWord{
     display: none;
   }
