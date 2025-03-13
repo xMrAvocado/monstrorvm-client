@@ -11,6 +11,7 @@ import MonsterList from "./pages/MonsterList";
 import AddMonster from "./pages/AddMonster";
 import { useEffect,useState } from "react";
 import EditMonster from "./pages/EditMonster";
+import Error from "./pages/Error";
 
 function App() {
   const [listMonsters, setListMonsters] = useState([]);
@@ -54,6 +55,7 @@ function App() {
           }
         ></Route>
 
+        <Route path="/error" element={<Error />}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>
 

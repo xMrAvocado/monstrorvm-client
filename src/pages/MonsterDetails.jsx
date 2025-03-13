@@ -13,23 +13,21 @@ function MonsterDetails() {
   const [monster, setMonster] = useState(null);
   
     useEffect(() => {
-      fetch(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
+      axios.get(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
         .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
+          console.log("Then");
           //console.log(data);
-          setMonster(data);
+          setMonster(response.data);
         })
         .catch((error) => {
-          console.log(error);
-          navigate(`*`)
+          console.log("Catch", error);
+          navigate(`/error`);
         });
     }, [parametrosDinamicos.monsterId]);
 
     if(monster === null){
         return(
-            <div>
+            <div style={{ textAlign: "center", paddingTop: "200px", alignItems:"center" }}>
                 <h3>Buscando data del monstruo...</h3>
                 <ClipLoader color="#9a1b1b"/>
             </div>

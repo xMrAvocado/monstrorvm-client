@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
+
 function NotFound() {
   return (
-    <div style={{ textAlign: "center", paddingTop: "200px" }}>
-      <h1 >ERROR: 404</h1>
+    <div style={{ textAlign: "center", paddingTop: "500px", alignItems:"center"}}>
+      <h1 >ERROR: NOT FOUND</h1>
+      <Link to="/"><button>Back</button></Link>
     </div>
   );
 }
