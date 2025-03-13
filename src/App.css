@@ -184,6 +184,7 @@ button:hover {
   background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360012/Grunts_bg_xuyzqk.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  /*background-position: center*/
   padding-top: 75px;
   padding-bottom: 50px;
   height: 85vh;
