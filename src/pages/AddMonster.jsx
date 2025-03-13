@@ -57,7 +57,7 @@ function AddMonster() {
             placeholder="Name"
             onChange={handleAll}
           />
-          <label>Id Category:&nbsp;</label>
+          <label>Category:&nbsp;</label>
           {/*<input
             value={newMonster.categoryId}
             name="categoryId"

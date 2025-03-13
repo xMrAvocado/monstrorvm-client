@@ -136,7 +136,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-image: url("https://res.cloudinary.com/dh8naz2ht/image/upload/v1741360013/huntbackground_2_flljtd.jpg");
   background-repeat: no-repeat;
@@ -155,8 +155,6 @@ button:hover {
   text-align: center;
   justify-content: space-around;
   align-items: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 50vh;
 }
 
@@ -410,13 +408,10 @@ button:hover {
 }
 
 
-@media (width <= 1250px) {
+@media (width <= 1150px) {
   .categoryDetails {
-    margin: 60px;
-  }
-
-  #monsterListCSS{
-    height: 40vh;
+    margin: 5px;
+    margin-bottom: 10px;
   }
 
   #monsterDescription{
@@ -424,6 +419,34 @@ button:hover {
   }
 
   #categoriesCSS {
-    height: 88vh;
+    padding-top: 100px;
+    height: 80vh;
+  }
+  #menuWord{
+    display: none;
+  }
+
+  #monsterDescription{
+    margin: 0px 10px 0px 10px;
+    word-spacing: 2px;
+  }
+
+  #monsterListCSS{
+    height: 100%;
+  }
+
+  #eachMonsterList {
+    margin-bottom: 10px;
+  }
+
+  .descripcionEstudiante{
+    margin: 20px 10px 0px 10px;
+    padding:10px 20px 10px 20px;
+    word-spacing: 1px;
+  }
+
+  .descripcionProyecto{
+    padding:10px 20px 10px 20px;
+    word-spacing: 1px;
   }
 }
