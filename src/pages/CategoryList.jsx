@@ -10,7 +10,6 @@ function CategoryList() {
         return response.json();
       })
       .then((data) => {
-        //console.log(data);
         setAllCategories(data);
       })
       .catch((error) => {
@@ -19,7 +18,6 @@ function CategoryList() {
   }, []);
   return (
     <div id="categoriesCSS">
-      {/*<h1 className="pageTitle">CATEGORIES</h1>*/}
       {allCategories.map((eachCategory) => {
         return (
           <Link key={eachCategory.id} to={`/monsters/category/${eachCategory.id}`}>

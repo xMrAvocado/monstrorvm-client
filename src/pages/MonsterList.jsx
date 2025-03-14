@@ -9,19 +9,9 @@ function MonsterList() {
   const [categoryMonsters, setCategoryMonsters] = useState([]);
   const [category, setCategory] = useState([]);
 
-  
-  //console.log(parametrosDinamicos.categoryId);
-
-  // const [searchParams, setSearchParams] = useSearchParams();
 
   const handleSelectCategory = (event) => {
-    //console.log("seleccionando categoryId de: " + event.target.value)
     navigate(`/monsters/category/${event.target.value}`)
-    /*if(event.target.value === ""){
-      setSearchParams() // limpiar los querys
-    }else{
-      setSearchParams({ categoryId: event.target.value})
-    }*/
   }
 
   const categoryId = parametrosDinamicos.categoryId
@@ -33,11 +23,9 @@ function MonsterList() {
 
       try {
         const response1 = await axios.get(`${import.meta.env.VITE_SERVER_URL}/monsters?categoryId=${categoryId}`);
-        //console.log("HOLA",response)
         setCategoryMonsters(response1.data);
 
         const response2 = await axios.get(`${import.meta.env.VITE_SERVER_URL}/categories/${categoryId}`);
-        //console.log("ADIOS",response)
         setCategory(response2.data);
 
       } catch (error) {

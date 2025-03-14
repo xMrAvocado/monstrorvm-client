@@ -16,7 +16,6 @@ function Navbar() {
             clone = true;
             cambioScaleY = "scaleY(1)"; // Lo hacemos visible
         }
-        //console.log(clone)
         setStateSidebar(clone);
     };
 

@@ -22,7 +22,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        //console.log(data);
         setListMonsters(data);
       })
       .catch((error) => {

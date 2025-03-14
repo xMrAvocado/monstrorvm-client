@@ -6,7 +6,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 function MonsterDetails() {
   const parametrosDinamicos = useParams();
-  //console.log(parametrosDinamicos.monsterId);
 
   const navigate = useNavigate();
 
@@ -15,8 +14,6 @@ function MonsterDetails() {
     useEffect(() => {
       axios.get(`${import.meta.env.VITE_SERVER_URL}/monsters/${parametrosDinamicos.monsterId}?_expand=category`)
         .then((response) => {
-          console.log("Then");
-          //console.log(data);
           setMonster(response.data);
         })
         .catch((error) => {

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 function EditMonster() {
   const parametrosDinamicos = useParams();
-  //console.log(parametrosDinamicos.monsterId);
 
   const navigate = useNavigate();
 
@@ -25,11 +24,10 @@ function EditMonster() {
         }`
       )
       .then((response) => {
-        //console.log(response)
         setEditedMonster(response.data);
       })
       .catch((error) => {
-        //console.log(error)
+        console.log(error)
       });
   }, []);
 
@@ -48,8 +46,6 @@ function EditMonster() {
           image: editedMonster.image,
         }
       );
-      //console.log("todo bien, tarea creada");
-      //console.log(response)
       setEditedMonster(response.data);
       setEditedMonster({
         name: "",
@@ -79,13 +75,6 @@ function EditMonster() {
         </div>
         <div className="formElement">
           <label>Id Category:&nbsp;</label>
-          {/*<input
-                value={editedMonster.categoryId}
-                name="categoryId"
-                type="text"
-                placeholder="Category Id"
-                onChange={handleAll}
-              />*/}
           <select
             className="categoryForm"
             name="categoryId"

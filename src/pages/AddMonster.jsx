@@ -31,7 +31,6 @@ function AddMonster() {
         image: newMonster.image,
       });
       console.log("todo bien, tarea creada");
-      //console.log(response)
       setNewMonster(response.data);
       setNewMonster({
         name: "",
@@ -62,13 +61,6 @@ function AddMonster() {
           
           <div className="formElement">
           <label>Category:&nbsp;</label>
-          {/*<input
-            value={newMonster.categoryId}
-            name="categoryId"
-            type="text"
-            placeholder="Category Id"
-            onChange={handleAll}
-          />*/}
           {/*//todo: imprimir todas las categorias haciendo get y usando un .map*/}
           <select className="categoryForm" name="categoryId" onChange={handleAll} value={newMonster.categoryId}>
             <option value="1234">Infected</option>
