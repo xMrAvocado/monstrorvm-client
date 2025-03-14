@@ -298,6 +298,8 @@ button:hover {
   margin: 0px 500px 0px 500px;
   padding:20px 30px 20px 30px;
   word-spacing: 4px;
+  max-width: 90vw;
+  overflow: hidden;
 }
 
 #btnsDetails{
